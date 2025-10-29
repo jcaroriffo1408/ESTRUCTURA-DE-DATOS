@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+
+        HeapsUtils heapsUtils = new HeapsUtils();
+
+        int[]A={15,8,3,9,4,6,1,5,11,13};  //ARREGLO DE EJEMPLO
+        int heapsize = A.length;
+
+        heapsUtils.buildMax(A); //CONSTRUYE EL HEAP COMO MAXHEAP
+        heapsUtils.Mostrar(A, heapsize); //METODO PARA MOSTRAR EL HEAP
+
+        System.out.println("\nValor máximo: " + heapsUtils.HeapMax(A)); //MUESTRA EL ELEMENTO MAS GRANDE
+
+
+        heapsUtils.ExtractMax(A); //EXTRAE LA RAIZ Y MODIFICA EL HEAP MANTENIENDO EL MAXHEAP
+        heapsize--;
+        heapsUtils.Mostrar(A, heapsize);
+
+    }
+}
